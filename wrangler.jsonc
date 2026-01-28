@@ -21,8 +21,8 @@
 	"d1_databases": [
 		{
 			"binding": "DB",
-			"database_name": "furry-apparel",
-			"database_id": "furry-apparel"
+			"database_name": "furry-apparel-index",
+			"database_id": "f8e2a680-5ab6-43c3-9731-4d49b7c3b2a6"
 		}
 	]
 	/**
