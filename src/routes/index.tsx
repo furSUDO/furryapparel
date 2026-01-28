@@ -76,7 +76,6 @@ export default component$(() => {
   const selectedCountry = useSignal("");
   const selectedCategory = useSignal("All");
   const showEUOnly = useSignal(false);
-  const suggestionsOpen = useSignal(false);
   const filteredStores = useSignal<ApparelStore[]>([]);
   const storesLoader = useGetStores();
   const isInitialized = useSignal(false);
