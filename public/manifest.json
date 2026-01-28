@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "FurryApparel",
+  "short_name": "Shop Furry Apparel",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#000",
+  "description": "Global furry apparel store index."
+}

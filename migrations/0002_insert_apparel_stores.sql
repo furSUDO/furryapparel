@@ -1,0 +1,22 @@
+-- Insert apparel stores data
+INSERT INTO apparel_stores (id, name, country, countryCode, isEU, category, url, description, socialPlatform, socialUrl) VALUES
+('1', 'F-Class Merch', 'United States', 'US', 0, 'Apparel', 'https://fclassmerch.com/', 'Custom apparel and merchandise for the furry community', NULL, NULL),
+('2', 'Howl Out', 'United States', 'US', 0, 'Apparel', 'https://howl-out.com/', 'Furry streetwear brand by indigenous and LGBTQ+ artists', '@howl_out', 'https://x.com/howl_out'),
+('3', '0 Fox Shop', 'United States', 'US', 0, 'Apparel', 'https://0foxshop.com/', 'Clothing, accessories and home goods with fox-inspired designs', '@0foxShop', 'https://x.com/0foxShop'),
+('4', 'Hyena Agenda', 'United States', 'US', 0, 'Apparel', 'https://hyena-agenda.com/', 'Artist-owned apparel company with bold, vibrant designs and in-house artwork', '@HyenaAgenda', 'https://x.com/HyenaAgenda'),
+('5', 'CAMP HOWL', 'United States', 'US', 0, 'Apparel', 'https://www.camphowl.com/', 'Colorful apparel and accessories with saturated, brilliant designs', '@camphowl', 'https://x.com/camphowl'),
+('6', 'Wolf Moon Apparel', 'United States', 'US', 0, 'Apparel', 'https://wolfmoonapparel.storenvy.com/', 'Wolf-themed clothing and accessories for the furry fandom', '@WolfMoonApparel', 'https://x.com/WolfMoonApparel'),
+('7', 'YaffYoff!', 'United States', 'US', 0, 'Apparel', 'https://yaffyoff.com/', 'Furry-focused apparel and merchandise', '@yaffyoff', 'https://x.com/yaffyoff'),
+('8', 'Yuka Designs', 'United States', 'US', 0, 'Design', 'https://yuka.design/', 'Character design and apparel services', '@yukadesigns', 'https://x.com/yukadesigns'),
+('9', 'Waffle Wishes', 'Canada', 'CA', 0, 'Apparel', 'https://wafflewishes.com/shop', 'Cozy and whimsical apparel for the furry community', '@wisheswaffle', 'https://x.com/wisheswaffle'),
+('10', 'Nomad Complex', 'Canada', 'CA', 0, 'Premium', 'https://nomadcomplex.com/', 'Premium quality apparel and accessories, beloved by the furry fandom', '@NomadComplex', 'https://x.com/NomadComplex'),
+('11', 'The Fox Nest', 'European Union', 'EU', 1, 'Apparel', 'https://thefoxnest.store/', 'EU-based furry apparel and accessories', '@TheFoxNestStore', 'https://x.com/TheFoxNestStore'),
+('12', 'JustCats', 'Finland', 'FI', 1, 'Apparel', 'https://justcats.fi/', 'Cat-themed apparel from Finland', '@JustCatsWear', 'https://x.com/JustCatsWear'),
+('13', 'Awruff Gear', 'European Union', 'EU', 1, 'Apparel', 'https://awruffgear.com/', 'European furry apparel and gear', '@ArtWexon', 'https://x.com/ArtWexon'),
+('14', 'NovCraft', 'Germany', 'DE', 1, 'Apparel', 'https://novcraft-shop.de/', 'German-based furry apparel and handcrafted goods', '@nov_craft', 'https://x.com/nov_craft'),
+('15', 'V-ART', 'United Kingdom', 'GB', 0, 'Apparel', 'https://werewolvesrule.com/', 'Werewolf and supernatural themed apparel', '@Werewolf_V', 'https://x.com/Werewolf_V'),
+('16', 'Dogz Crew', 'United Kingdom', 'GB', 0, 'Apparel', 'https://www.dogzcrew.com/furry', 'Furry-focused apparel and merchandise from the UK', '@thedogzcrew', 'https://x.com/thedogzcrew'),
+('17', 'Rudderbutts', 'Mexico', 'MX', 0, 'Apparel', 'https://rudderbutts.shop/', 'Mexican furry apparel and accessories', '@rudderbutts', 'https://x.com/rudderbutts'),
+('18', 'ArtyChikle', 'Mexico', 'MX', 0, 'Design', 'https://artychikle.com/', 'Mexican art and apparel design services', '@ArtyandChikle', 'https://x.com/ArtyandChikle'),
+('19', 'Burubado', 'Australia', 'AU', 0, 'Apparel', 'https://burubado.com/', 'Australian furry apparel and merchandise', '@burubado_furry', 'https://x.com/burubado_furry'),
+('20', 'Angy Paws', 'Australia', 'AU', 0, 'Apparel', 'https://www.angypaws.com/', 'Australian furry apparel with paw-some designs', '@AngyPaws', 'https://x.com/AngyPaws');
