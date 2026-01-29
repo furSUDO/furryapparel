@@ -25,11 +25,11 @@ export const useGetStores = routeLoader$(async (requestEvent) => {
       description: row.description,
       ...(row.socialPlatform && row.socialUrl
         ? {
-            social: {
-              platform: row.socialPlatform,
-              url: row.socialUrl,
-            },
-          }
+          social: {
+            platform: row.socialPlatform,
+            url: row.socialUrl,
+          },
+        }
         : {}),
     }));
 
@@ -79,6 +79,7 @@ export default component$(() => {
   const filteredStores = useSignal<ApparelStore[]>([]);
   const storesLoader = useGetStores();
   const isInitialized = useSignal(false);
+  const suggestionsOpen = useSignal(false);
 
 
 
@@ -157,7 +158,7 @@ export default component$(() => {
             {/* Category Filter */}
             <div class="space-y-2">
               <label class="block text-sm font-mono font-bold">
-                $ CATEGORY
+                $ CATEGORY (⚠️ WIP)
               </label>
               <select
                 value={selectedCategory.value}
@@ -225,7 +226,7 @@ export default component$(() => {
 
             {/* TO-DO: Suggestion Form */}
             {/* Make it submit to the discord bot for manual approval */}
-            {/* <div class="space-y-2">
+            <div class="space-y-2">
               <button
                 onClick$={() =>
                   (suggestionsOpen.value = !suggestionsOpen.value)
@@ -237,38 +238,47 @@ export default component$(() => {
 
 
               {suggestionsOpen.value && (
-                <div class="space-y-2 p-3 border-2 border-black dark:border-white bg-white dark:bg-black">
-                  <input
-                    type="text"
-                    placeholder="Store name"
-                    class="w-full p-2 border-2 border-black dark:border-white dark:bg-black bg-white font-mono text-xs focus:outline-none focus:invert dark:focus:invert"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Store URL"
-                    class="w-full p-2 border-2 border-black dark:border-white dark:bg-black bg-white font-mono text-xs focus:outline-none focus:invert dark:focus:invert"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Twitter/X handle (optional)"
-                    class="w-full p-2 border-2 border-black dark:border-white dark:bg-black bg-white font-mono text-xs focus:outline-none focus:invert dark:focus:invert"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Your email"
-                    class="w-full p-2 border-2 border-black dark:border-white dark:bg-black bg-white font-mono text-xs focus:outline-none focus:invert dark:focus:invert"
-                  />
-                  <textarea
-                    placeholder="Why should it be added?"
-                    rows={3}
-                    class="w-full p-2 border-2 border-black dark:border-white dark:bg-black bg-white font-mono text-xs focus:outline-none focus:invert dark:focus:invert resize-none"
-                  ></textarea>
-                  <button class="w-full p-2 bg-black dark:bg-white text-white dark:text-black font-mono text-xs font-bold hover:opacity-80 transition-opacity">
-                    SUBMIT
-                  </button>
+                <div class="disabled">
+                  <div class="space-y-2 p-3 border-2 border-black dark:border-white bg-white dark:bg-black">
+                    <input
+                      type="text"
+                      placeholder="Store name"
+                      class="w-full p-2 border-2 border-black dark:border-white dark:bg-black bg-white font-mono text-xs focus:outline-none focus:invert dark:focus:invert"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Store URL"
+                      class="w-full p-2 border-2 border-black dark:border-white dark:bg-black bg-white font-mono text-xs focus:outline-none focus:invert dark:focus:invert"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Social Media link (optional)"
+                      class="w-full p-2 border-2 border-black dark:border-white dark:bg-black bg-white font-mono text-xs focus:outline-none focus:invert dark:focus:invert"
+                    />
+                    <input
+                      type="email"
+                      placeholder="Your email"
+                      class="w-full p-2 border-2 border-black dark:border-white dark:bg-black bg-white font-mono text-xs focus:outline-none focus:invert dark:focus:invert"
+                    />
+                    <textarea
+                      placeholder="Why should it be added?"
+                      rows={3}
+                      class="w-full p-2 border-2 border-black dark:border-white dark:bg-black bg-white font-mono text-xs focus:outline-none focus:invert dark:focus:invert resize-none"
+                    ></textarea>
+                    {/* text area saying form is still wip */}
+                    <p class="text-xs font-mono opacity-70 mt-2">
+                      This form is still a work in progress. And does not allow for submissions yet.
+                    </p>
+                    <button disabled class='cursor-not-allowed w-full p-2 bg-black dark:bg-white text-white dark:text-black font-mono text-xs font-bold
+                    opacity-50
+                    '>
+                      {/* hover:opacity-80 transition-opacity  */}
+                      SUBMIT
+                    </button>
+                  </div>
                 </div>
               )}
-            </div> */}
+            </div>
           </div>
 
 
@@ -293,7 +303,7 @@ export default component$(() => {
 
 
             {/* Stores List */}
-            <div class="space-y-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
               {filteredStores.value.length > 0 ? (
                 filteredStores.value.map((store) => (
                   <div
@@ -358,7 +368,7 @@ export default component$(() => {
             {/* Footer */}
             <div class="mt-12 pt-6 border-t-2 border-black dark:border-white opacity-60">
               <p class="text-xs font-mono">
-                $ furry-apparel-index v1.0 | 
+                $ furry-apparel-index v1.0 |
                 Maintained by <a href="https://bsky.app/profile/did:plc:aakmgpxyqmyzdq27ilyqirev" target="_blank" class="underline">SUDO</a>
               </p>
               <p class="text-xs font-mono mt-1">
