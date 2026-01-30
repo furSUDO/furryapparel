@@ -8,6 +8,8 @@
 node_modules
 *.local
 .wrangler
+.wrangler/*
+.dev.vars
 
 # Cache
 .cache
@@ -34,3 +36,4 @@ lerna-debug.log*
 *.njsproj
 *.sln
 *.sw?
+src/components/SuggestForm.tsx
