@@ -27,24 +27,29 @@
     "qwik": "qwik"
   },
   "devDependencies": {
-    "@builder.io/qwik": "^1.18.0",
-    "@builder.io/qwik-city": "^1.18.0",
-    "@cloudflare/workers-types": "^4.20260128.0",
+    "@builder.io/qwik": "^1.19.0",
+    "@builder.io/qwik-city": "^1.19.0",
+    "@cloudflare/workers-types": "^4.20260130.0",
     "@eslint/js": "latest",
-    "@tailwindcss/vite": "^4.1.4",
+    "@modular-forms/qwik": "^0.29.1",
+    "@tailwindcss/vite": "^4.1.18",
     "@types/node": "25.1.0",
     "eslint": "9.39.2",
-    "eslint-plugin-qwik": "^1.18.0",
+    "eslint-plugin-qwik": "^1.19.0",
     "globals": "17.2.0",
     "prettier": "3.8.1",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "tailwindcss": "^4.1.4",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "tailwindcss": "^4.1.18",
     "typescript": "5.9.3",
     "typescript-eslint": "8.54.0",
     "typescript-plugin-css-modules": "latest",
     "undici": "^7.19.2",
     "vite": "7.3.1",
     "vite-tsconfig-paths": "^6.0.5",
-    "wrangler": "^4.61.0"
+    "wrangler": "^4.61.1"
+  },
+  "dependencies": {
+    "simple-icons": "^16.6.1",
+    "valibot": "^1.2.0"
   }
 }
