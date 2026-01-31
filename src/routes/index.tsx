@@ -64,12 +64,12 @@ export const useGetStores = routeLoader$(async (requestEvent) => {
 export default component$(() => {
   const searchQuery = useSignal("");
   const selectedCountry = useSignal("");
-  const showEUOnly = useSignal(true);
+  const showEUOnly = useSignal(false);
   const filteredStores = useSignal<ApparelStore[]>([]);
   const storesLoader = useGetStores();
   const isInitialized = useSignal(false);
   const suggestionsOpen = useSignal(false);
-  const showNSFW = useSignal(true);
+  const showNSFW = useSignal(false);
 
   useTask$(() => {
     if (

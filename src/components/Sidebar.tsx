@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import { COUNTRIES } from "../lib/apparel";
-import SuggestForm from "./SuggestForm";
+import SuggestForm from "./SuggestionForm";
 
 export default component$((props: any) => {
   const {
